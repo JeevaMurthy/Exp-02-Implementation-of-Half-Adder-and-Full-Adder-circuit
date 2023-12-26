@@ -34,21 +34,48 @@ Sum =A’B’Cin + A’BCin’ + ABCin + AB’Cin’ = A ⊕ B ⊕ Cin Carry = A
 Connect the supply (+5V) to the circuit
 Switch ON the main switch
 If the output is 1, then the led glows.
-### 
-Program:
-/*
+### Program:
+```
 Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
+Developed by:DHARSHAN D
+RegisterNumber:23001663
+
+1.Program to design a half adder:
+module ex3(a,b,sum,carry);
+input a,b;
+output sum,carry;
+assign sum=a^b;
+assign carry=a&b;
+endmodule
+
+1.Program to design a full adder:
+module ex31(a,b,cin,sum,carry);
+input a,b,cin;
+output sum,carry;
+assign sum=a^b^cin;
+assign carry=(a&b)|((a^b)&cin);
+endmodule
 Logic symbol & Truthtable
-RTL realization
-
+```
 ### Output:
-### RTL
-### TIMING DIAGRAM
+### RTL realization:
+## HALF ADDER:
+![image](https://github.com/dharshan7200/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/138850116/6aed19e5-b55a-4a55-804a-d240073594ca)
+## FULL ADDER:
+![image](https://github.com/dharshan7200/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/138850116/e2f2db7e-ca41-43c5-a602-b0411b8f9a09)
+### TIMING DIAGRAM:
+## HALF ADDER:
+![image](https://github.com/dharshan7200/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/138850116/e608bc4e-fc70-489b-8e93-ac3d7045f467)       
+## FULL ADDER:
+![image](https://github.com/dharshan7200/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/138850116/7eba3d8b-563b-4341-97b0-8f5846b07898)
 
 
-### TRUTH TABLE 
+### TRUTH TABLE:
+## HALF ADDER:
+![image](https://github.com/dharshan7200/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/138850116/591311cb-f323-4409-8b48-10231f6f01d0)
+## FULL ADDER:
+![image](https://github.com/dharshan7200/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/138850116/bd1d5917-0be7-4fd1-90f2-13781cea7bd6)
+
 
 ### Result:
+Thus the half adder and full adder circuit are designed and the truth table for half adder and full adder are verified.
